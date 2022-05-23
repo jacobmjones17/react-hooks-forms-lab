@@ -7,7 +7,12 @@ const [category, setCategory] = useState("Produce")
 
   function handleSubmit(event) {
     event.preventDefault();
-    onItemFormSubmit({name, category})
+    onItemFormSubmit({
+      name: name, 
+      category: category,
+      id: uuid(),
+    
+    })
   }
 
   function handleNameChange(event) {
